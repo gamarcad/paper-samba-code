@@ -9,6 +9,6 @@ _venv
 !requirements.txt
 samba
 !LICENCE.txt
-!README.txt
+!README.md
 __pycache__
 
