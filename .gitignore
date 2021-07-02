@@ -1,0 +1,14 @@
+.idea
+*.txt
+!data/**
+**.png
+output
+_**.py
+_**.sh
+_venv
+!requirements.txt
+samba
+!LICENCE.txt
+!README.txt
+__pycache__
+

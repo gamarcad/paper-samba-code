@@ -1,0 +1,1 @@
+This folder contains parameters used to configure algorithms.
