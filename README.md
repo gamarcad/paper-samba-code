@@ -5,6 +5,11 @@ Radu Ciucanu, Marta Soare, Pascal Lafourcade and Gael Marcadet.
 ## Installation Guide
 This section describes the way to install Samba in a local environment.
 
+### Requirements
+To run Samba, *python3* and *pip3* must be installed.
+
+### Installation of Samba
+
 Samba needs some libraries with a specific version in order to guarantee
 a functional program over the time.
 

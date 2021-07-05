@@ -2,9 +2,34 @@
 
 VENV_NAME='samba'
 
+# ==========================================================
+# Checking necessary language and librairies that must be
+# install by the user.
+# ==========================================================
+# Checks that python3 is installed as well as pip3
+if (! type "python3" > /dev/null); then
+  echo "python3 is not installed on your system."
+  echo "Install it before to launch this program".
+  exit 1
+fi
+
+if (! type "pip3" > /dev/null); then
+  echo "pip3 is not installed on your system."
+  echo "Install it before to launch this program".
+  exit 1
+fi
+
+
 # ===========================================================
 # Creating Python virtual environment
 # ===========================================================
+# checks that python3-venv is installed or install it if not installed yet
+if (! type "python3 -m venv -h" > /dev/null); then
+  echo "Python3 venv library is not installed."
+  echo "Installing venv library..."
+  apt install python3-venv
+fi
+
 if [ ! -d $VENV_NAME ]; then
   echo "Creating Python virtual environment..."
   python3 -m venv $VENV_NAME
