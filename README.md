@@ -11,7 +11,6 @@ To install them,
 ```shell
 apt-get update -y && apt-get upgrade -y
 apt-get install build-essential libssl-dev git python3 python3-pip python3-venv -y
-pip3 install --upgrade pip
 ```
 
 ### Installation of Samba
@@ -48,8 +47,8 @@ The virtual environment can be managed with these commands to enter in your term
 
 ### Troubleshooting
 If an error occurs during *cryptography* library, causing by a missing`setuptools_rust` module,
-just update pip3 by using the `pip3 install --upgrade pip` command.
-The solution comes from https://github.com/pyca/cryptography/issues/5753
+you need to update the pip module inside the environment by doing `samba/bin/python3 -m pip install --upgrade pip` command.
+The solution is adapted from the issue claimed at https://github.com/pyca/cryptography/issues/5753
 
 
 ## Benchmarks Execution Guide

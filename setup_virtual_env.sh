@@ -3,7 +3,7 @@
 VENV_NAME='samba'
 
 # ==========================================================
-# Checking necessary language and librairies that must be
+# Checking necessary language and libraries that must be
 # install by the user.
 # ==========================================================
 # Checks that python3 is installed as well as pip3
@@ -12,13 +12,6 @@ if (! type "python3" > /dev/null); then
   echo "Install it before to launch this program".
   exit 1
 fi
-
-if (! type "pip3" > /dev/null); then
-  echo "pip3 is not installed on your system."
-  echo "Install it before to launch this program".
-  exit 1
-fi
-
 
 # ===========================================================
 # Creating Python virtual environment
@@ -39,13 +32,17 @@ else
   fi
 fi
 
+# updating pip
+"$VENV_NAME/bin/python3" -m pip install --upgrade pip
+
 # ==========================================================
 # Initializing Python virtual environment
 # ==========================================================
 echo "Initializing virtual environment..."
 
+
 # installing requires dependencies detailed in the requirements.txt file
-"$VENV_NAME/bin/pip3" install -r requirements.txt
+"$VENV_NAME/bin/python3" -m pip install -r requirements.txt
 
 
 echo '------------------------------------'
