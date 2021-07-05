@@ -46,7 +46,7 @@ The virtual environment can be managed with these commands to enter in your term
     the instance in the virtual environment, meaning that the current path will not changed.
 
 ### Troubleshooting
-If an error occurs during *cryptography* library, causing by a missing`setuptools_rust` module,
+If an error occurs during *cryptography* library installation, causing by a missing`setuptools_rust` module,
 you need to update the pip module inside the environment by doing `samba/bin/python3 -m pip install --upgrade pip` command.
 The solution is adapted from the issue claimed at https://github.com/pyca/cryptography/issues/5753
 
@@ -55,39 +55,43 @@ The solution is adapted from the issue claimed at https://github.com/pyca/crypto
 This section describes the benchmarks process.
 
 Once the virtual environment is installed, you will be able to run the benchmarks.
-Enter to the virtual environment and runs the following commands in the presented order:
+Enter to the virtual environment and run the following commands in the presented order:
 
 - `sudo python3 bench.py -h`
     This command displays a details of each parameter needed by the benchmark program.
     You are free to complete each required option, or to execute the next command which is basically
     a script shell which execute the bench.py python script with appropriated arguments. 
     Some files must be indicated to the program:
-        --configs <filename> indicates the file containing all couples of numbers of arms K and budget N to consider,
+        The `--configs <filename>` option indicates the file containing all pairs of numbers of arms K and budget N to consider,
         in a CSV file format.
-        --data <filename> indicates the file containing arms probabilities in a textual format, one probability by line.
-        --parameters <filename> indicates the file containing parameters in a CSV format, used to feed algorithms that
-        requires some algorithms.
+        The `--data <filename>` option indicates the file containing arms probabilities in a textual format, one probability by line.
+        Finally, the `--parameters <filename>` option indicates the file containing parameters in a CSV format, used to feed algorithms that
+        requires some parameters.
 
-    In case you want to focus on some algorithm, you can indicate the --algorithms <IDalgo1> <IDalgo2> ...
-    where supported algorithms, detailed here as his name and his ID:
-        Pursuit (ID: pursuit),
-        Softmax (ID: boltzmann),
-        epsilon-greedy (ID: e-greedy),
-        epsilon-greedy decreasing (ID: e-decreasing-greedy),
-        Thompson Sampling (ID: thompson-sampling)
-        UCB (ID: ucb)
+    In case you want to focus on some algorithm, you can indicate the `--algorithms <IDalgo1> <IDalgo2> ...`
+    where supported algorithms, detailed here by name and ID are:
+    
+| Algorithm | ID |
+| --- | --- |
+| Pursuit | pursuit | 
+| Softmax | boltzmann | 
+|  epsilon-greedy |e-greedy |  
+| epsilon-greedy decreasing | e-decreasing-greedy|
+| Thompson Sampling | thompson-sampling |
+| UCB | ucb |
 
-    To decrease the needed execution time, bench.py supports the multi-processing.
-    By default, it uses the number of core available on the system.
-    You can decide the number of core to use with --cpu <nb_core> option.
+
+To decrease the needed execution time, bench.py supports the multi-processing.
+By default, it uses the number of core available on the system.
+You can decide the number of core to use with `--cpu <nb_core>` option.
     
 - `sudo launch_experiments.sh`
     This command executes the benchmark with pre-filled parameters.
-    Note the --run option, which indicates to the program to run the benchmarks.
+    Note the `--run` option, which indicates to the program to run the benchmarks.
     Benchmarks may take a long time depending on configurations and data.
     To ensure that the given configuration is well stated, by default the benchmarks program
     displays the configuration to execute.
-    When you are sure about the configuration, indicate the --run option.
+    When you are sure about the configuration, indicate the `--run` option.
 
     Additionally, this scripts calls the plotting program which generates plots used in paper.
 
@@ -129,11 +133,11 @@ without arguments.
 
 ### Parameter Files
 Parameter files located under `parameters` folder, contains parameters optimized for datasets we used in our experiments.
-Each parameter file is a CSV file, contains the header row *tau, beta, epsilon* columns and a single data row containing
+Each parameter file is a CSV file, containing the header row *tau, beta, epsilon* columns and a single data row containing
 parameter in order defined in the header.
 
 We used these parameters thanks to the `parameters_suggestion.py` script which, for a given dataset, 
-suggests the parameter which returns the highest cumulative reward.
+suggests the set of parameters which returns the highest cumulative reward.
 
 
 ### Config Files
