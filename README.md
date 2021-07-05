@@ -10,13 +10,9 @@ To run Samba, we need to have some library already installed on your system.
 To install them, 
 ```shell
 apt-get update -y && apt-get upgrade -y
-apt-get install build-essential curl libssl-dev git -y
-apt-get install python3 python3-pip python3-venv -y
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+apt-get install build-essential libssl-dev git python3 python3-pip python3-venv -y
+pip3 install --upgrade pip
 ```
-In case where Rust is not installed in your system, please type the command `source $HOME/.cargo/env`
-which updates your `.bashrc`.
-For more details, visit the Rust webpage https://www.rust-lang.org/tools/install.
 
 ### Installation of Samba
 
@@ -49,6 +45,12 @@ The virtual environment can be managed with these commands to enter in your term
 - `deactivate`: Exit the virtual environment.
     Works only when you are in the virtual environment, this command will only affect
     the instance in the virtual environment, meaning that the current path will not changed.
+
+### Troubleshooting
+If an error occurs during *cryptography* library, causing by a missing`setuptools_rust` module,
+just update pip3 by using the `pip3 install --upgrade pip` command.
+The solution comes from https://github.com/pyca/cryptography/issues/5753
+
 
 ## Benchmarks Execution Guide
 This section describes the benchmarks process.
