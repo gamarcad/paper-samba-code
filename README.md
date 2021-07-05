@@ -36,20 +36,19 @@ This script creates and initializes the virtual environment with all desired lib
 Once executed, a new directory called 'samba' will be created, containing python binaries.
 The virtual environment can be managed with these commands to enter in your terminal:
 
-- `source samba/bin/activate`: Open an instance in the virtual environment.
-    Once executed, you will notice (samba) in front of your prompt, meaning that
+- `source samba/bin/activate` opens an instance in the virtual environment.
+    Once executed, you will notice `(samba)` in front of your prompt (e.g., `(samba) user@machine $`), meaning that
     you are in the virtual environment. Note that all your commands installed on
     your system will be usable as usual.
     
-- `deactivate`: Exit the virtual environment.
+- `deactivate` exits the virtual environment.
     Works only when you are in the virtual environment, this command will only affect
-    the instance in the virtual environment, meaning that the current path will not changed.
+    the instance in the virtual environment, meaning that the current path will not change.
 
 ### Troubleshooting
 If an error occurs during *cryptography* library installation, causing by a missing`setuptools_rust` module,
 you need to update the pip module inside the environment by doing `samba/bin/python3 -m pip install --upgrade pip` command.
 The solution is adapted from the issue claimed at https://github.com/pyca/cryptography/issues/5753
-
 
 ## Benchmarks Execution Guide
 This section describes the benchmarks process.
@@ -90,10 +89,13 @@ You can decide the number of core to use with `--cpu <nb_core>` option.
     Note the `--run` option, which indicates to the program to run the benchmarks.
     Benchmarks may take a long time depending on configurations and data.
     To ensure that the given configuration is well stated, by default the benchmarks program
-    displays the configuration to execute.
-    When you are sure about the configuration, indicate the `--run` option.
+    displays the configuration based on the inputs.
+    When you are sure about the configuration, then indicate the `--run` option.
 
-    Additionally, this scripts calls the plotting program which generates plots used in paper.
+    Additionally, this scripts calls the plotting program which generates plots, 
+    under the `output` directory.
+    Hence, no more action is necessary to get the plots.
+  
 
 
 ## Detailed Data Files Format and Generation
