@@ -23,14 +23,6 @@ fi
 # ===========================================================
 # Creating Python virtual environment
 # ===========================================================
-# checks that python3-venv is installed or install it if not installed yet
-python3 -m venv -h
-if [ $? -eq 0 ]; then
-  echo "Python3 venv library is not installed."
-  echo "Install it before to language this program"
-  exit 1
-fi
-
 if [ ! -d $VENV_NAME ]; then
   echo "Creating Python virtual environment..."
   python3 -m venv $VENV_NAME

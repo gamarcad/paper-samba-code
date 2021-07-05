@@ -9,12 +9,12 @@ This section describes the way to install Samba in a local environment.
 To run Samba, we need to have some library already installed on your system.
 To install them, 
 ```shell
-apt-get update && apt-get upgrade
-apt-get install build-essential curl libssl-dev git
-apt-get install python3 python3-pip python3-venv
+apt-get update -y && apt-get upgrade -y
+apt-get install build-essential curl libssl-dev git -y
+apt-get install python3 python3-pip python3-venv -y
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
-In case where Rust is not installed in your system, please type the command `source $HOME/.cargo/env && reset`
+In case where Rust is not installed in your system, please type the command `source $HOME/.cargo/env`
 which updates your `.bashrc`.
 For more details, visit the Rust webpage https://www.rust-lang.org/tools/install.
 
@@ -33,8 +33,11 @@ To limit the impact of these libraries on the installed system, we provide a
 Python virtual environment, allowing to install all libraries we need in a
 specific location out of your python system configuration.
 
-To install the virtual environment, we propose a bash script called `setup_virtual_env.sh`
-in order to create and initialize the virtual environment with all desired libraries installed.
+To install the virtual environment, type the command
+```shell 
+./setup_virtual_env.sh
+```
+This script creates and initializes the virtual environment with all desired libraries installed.
 Once executed, a new directory called 'samba' will be created, containing python binaries.
 The virtual environment can be managed with these commands to enter in your terminal:
 
