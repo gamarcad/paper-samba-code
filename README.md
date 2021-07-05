@@ -6,43 +6,28 @@ Radu Ciucanu, Pascal Lafourcade, Gael Marcadet, and Marta Soare.
 This section describes the way to install Samba in a local environment.
 
 ### Requirements
-To run Samba, *python3*, *pip3* and *rustc* need to be installed on your system.
-
-#### Install python3
-To install on Python3 on Linux, type the following commands:
+To run Samba, we need to have some library already installed on your system.
+To install them, 
 ```shell
-sudo apt-get update
-sudo apt-get install python3
-```
-
-For Windows users, we refer the official documentation available at https://www.python.org/downloads/windows/.
-
-#### Install pip3 
-Pip3 allows us to manage python needed dependencies easily.
-To install it on Linux, type the following commands:
-```shell
-apt-get update
-apt-get install python3-pip
-```
-
-#### Install rustc
-The [Rust](https://www.rust-lang.org/) compiler (rustc) is needed to one of our library we used.
-To install it, simply type the following command (*curl* must be also installed as well):
-```shell
+apt-get update && apt-get upgrade
+apt-get install build-essential curl libssl-dev git
+apt-get install python3 python3-pip python3-venv
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
-
-Once install, you need to update your `.bashrc` in order to have access to the rust compiler, by typing the following 
-command once:
-```shell
-source $HOME/.cargo/env
-```
-
+In case where Rust is not installed in your system, please type the command `source $HOME/.cargo/env && reset`
+which updates your `.bashrc`.
 For more details, visit the Rust webpage https://www.rust-lang.org/tools/install.
+
 ### Installation of Samba
 
 Samba needs some libraries with a specific version in order to guarantee
 a functional program over the time.
+
+The first thing to do is to download the source from git by typing:
+```shell
+git clone https://github.com/gamarcad/paper-samba-code.git
+cd paper-samba-code
+```
 
 To limit the impact of these libraries on the installed system, we provide a
 Python virtual environment, allowing to install all libraries we need in a
