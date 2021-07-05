@@ -1,8 +1,11 @@
+# ======================================================================================================================
+# file: thompson_sampling.py
+# description: Implementation of the Thompson Sampling multi-armed bandits algorithm.
+# ======================================================================================================================
+
 from random import betavariate, seed
 
-from analyzer import check_correctness
 from proto import Architecture
-from permutation import IsolatedPermutation
 from proto import Proto, Controller, Comp, DataOwner, ProtoParameters
 from seed_random import IsolatedBernoulliArm, IsolatedRandomGenerator
 from utils import StandardBanditsAlgorithm, permute_and_max
