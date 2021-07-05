@@ -1,6 +1,6 @@
-# SAMBA: Secure Multi-Armed Bandits Framework
+# SAMBA: a generic framework for Secure federAted Multi-armed BAndits
 This project contains the implementation of Samba, a secure framework for multi-armed bandits designed by
-Radu Ciucanu, Marta Soare, Pascal Lafourcade and Gael Marcadet.
+Radu Ciucanu, Pascal Lafourcade, Gael Marcadet, and Marta Soare.
 
 ## Installation Guide
 This section describes the way to install Samba in a local environment.
@@ -18,7 +18,7 @@ Python virtual environment, allowing to install all libraries we need in a
 specific location out of your python system configuration.
 
 To install the virtual environment, we propose a bash script called `setup_virtual_env.sh`
-in order to create and initialized the virtual environment with all desired libraries installed.
+in order to create and initialize the virtual environment with all desired libraries installed.
 Once executed, a new directory called 'samba' will be created, containing python binaries.
 The virtual environment can be managed with these commands to enter in your terminal:
 
