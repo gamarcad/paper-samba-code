@@ -6,8 +6,39 @@ Radu Ciucanu, Pascal Lafourcade, Gael Marcadet, and Marta Soare.
 This section describes the way to install Samba in a local environment.
 
 ### Requirements
-To run Samba, *python3* and *pip3* must be installed.
+To run Samba, *python3*, *pip3* and *rustc* need to be installed on your system.
 
+#### Install python3
+To install on Python3 on Linux, type the following commands:
+```shell
+sudo apt-get update
+sudo apt-get install python3
+```
+
+For Windows users, we refer the official documentation available at https://www.python.org/downloads/windows/.
+
+#### Install pip3 
+Pip3 allows us to manage python needed dependencies easily.
+To install it on Linux, type the following commands:
+```shell
+apt-get update
+apt-get install python3-pip
+```
+
+#### Install rustc
+The [Rust](https://www.rust-lang.org/) compiler (rustc) is needed to one of our library we used.
+To install it, simply type the following command (*curl* must be also installed as well):
+```shell
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+Once install, you need to update your `.bashrc` in order to have access to the rust compiler, by typing the following 
+command once:
+```shell
+source $HOME/.cargo/env
+```
+
+For more details, visit the Rust webpage https://www.rust-lang.org/tools/install.
 ### Installation of Samba
 
 Samba needs some libraries with a specific version in order to guarantee

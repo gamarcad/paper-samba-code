@@ -32,7 +32,7 @@ JESTER_PARAMS="parameters/JesterLarge.csv"
 # ================================================
 # Execute experiments with arguments
 # note the -u command used to do not awaiting to write in stdin, stdout and stderr
-sudo python3 -u bench.py \
+python3 -u bench.py \
       --output $MOVIE_LENS_BENCHMARKS_OUTPUT_DIRECTORY\
       --data $MOVIE_LENS_DATA\
       --configs $BENCHMARKS_CONFIG\
@@ -46,7 +46,7 @@ sudo python3 -u bench.py \
 # ================================================
 # Execute experiments with arguments
 # note the -u command used to do not awaiting to write in stdin, stdout and stderr
-sudo python3 -u bench.py \
+python3 -u bench.py \
       --output $JESTER_BENCHMARKS_OUTPUT_DIRECTORY\
       --data $JESTER_DATA\
       --configs $BENCHMARKS_CONFIG\
@@ -60,7 +60,7 @@ sudo python3 -u bench.py \
 # ================================================
 # Execute experiments with arguments
 # note the -u command used to do not awaiting to write in stdin, stdout and stderr
-sudo python3 -u bench.py\
+python3 -u bench.py\
       --output $MOVIE_LENS_REWARDS_OUTPUT_DIRECTORY\
       --data $MOVIE_LENS_DATA\
       --configs $REWARDS_CONFIGS\
@@ -75,7 +75,7 @@ sudo python3 -u bench.py\
 # ================================================
 # Execute experiments with arguments
 # note the -u command used to do not awaiting to write in stdin, stdout and stderr
-sudo python3 -u bench.py\
+python3 -u bench.py\
       --output $JESTER_REWARDS_OUTPUT_DIRECTORY\
       --data $JESTER_DATA\
       --configs $REWARDS_CONFIGS\
@@ -88,7 +88,7 @@ sudo python3 -u bench.py\
 # ================================================
 # Plots
 # ================================================
-sudo python3 plot_bench.py \
+python3 plot_bench.py \
     --movie-lens-rewards $MOVIE_LENS_REWARDS_OUTPUT_DIRECTORY\
     --movie-lens-benchmarks $MOVIE_LENS_BENCHMARKS_OUTPUT_DIRECTORY\
     --jester-rewards $JESTER_REWARDS_OUTPUT_DIRECTORY\
