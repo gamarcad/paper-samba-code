@@ -13,7 +13,7 @@ Python virtual environment, allowing to install all libraries we need in a
 specific location out of your python system configuration.
 
 To install the virtual environment, we propose a bash script called `setup_virtual_env.sh`
-in order to create and initialized the virtual environment with all desired libraries installed.
+in order to create and initialize the virtual environment with all desired libraries installed.
 Once executed, a new directory called 'samba' will be created, containing python binaries.
 The virtual environment can be managed with these commands to enter in your terminal:
 
