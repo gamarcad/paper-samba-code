@@ -10,7 +10,7 @@ To run Samba, we need to have some library already installed on your system.
 To install them, 
 ```shell
 apt-get update -y && apt-get upgrade -y
-apt-get install build-essential libssl-dev git python3 python3-pip python3-venv -y
+apt-get install build-essential git python3 python3-pip python3-venv -y
 ```
 
 ### Installation of Samba
