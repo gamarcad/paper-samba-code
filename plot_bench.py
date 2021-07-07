@@ -570,6 +570,9 @@ def plot_figure(ml_benchmarks_path, ml_rewards_path, jester_benchmarks_path, jes
 
     plt.savefig(os.path.join(output_location, "zoom.pdf"), bbox_inches='tight')
 
+    # Notify use that plots generation is done
+    print(f"Plots have been generated under the {output_location} folder")
+
 
 # =======================================================================
 # Main
