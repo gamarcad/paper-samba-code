@@ -576,10 +576,10 @@ def plot_figure(ml_benchmarks_path, ml_rewards_path, jester_benchmarks_path, jes
 # =======================================================================
 def create_parser():
     parser = ArgumentParser()
-    parser.add_argument("--movie-lens-rewards", default="results/movie-lens/rewards-exploded")
-    parser.add_argument("--movie-lens-benchmarks", default="results/movie-lens/benchmarks-exploded-2")
-    parser.add_argument("--jester-rewards", default="results/jester/rewards-exploded")
-    parser.add_argument("--jester-benchmarks", default="results/jester/benchmarks-exploded-2")
+    parser.add_argument("--movie-lens-rewards", default="results/movie-lens/rewards")
+    parser.add_argument("--movie-lens-benchmarks", default="results/movie-lens/benchmarks")
+    parser.add_argument("--jester-rewards", default="results/jester/rewards")
+    parser.add_argument("--jester-benchmarks", default="results/jester/benchmarks")
     parser.add_argument('--output', default="output/pdf/")
     return parser
 

@@ -82,14 +82,14 @@ You can decide the number of core to use with `--cpu <nb_core>` option.
 | --- | --- |
 | Pursuit | pursuit | 
 | Softmax - Boltzmann | boltzmann | 
-| $\varepsilon$-greedy | e-greedy |  
-| $\varepsilon$-greedy decreasing | e-decreasing-greedy |
+| epsilon-greedy | e-greedy |  
+| epsilon-greedy decreasing | e-decreasing-greedy |
 | Thompson Sampling | thompson-sampling |
 | UCB | ucb |
 
 
     
-- `sudo launch_experiments.sh`
+- `sudo ./launch_benchmarks.sh`
     This command executes the benchmark with pre-filled parameters.
     Note the `--run` option, which indicates to the program to run the benchmarks.
     Benchmarks may take a long time depending on configurations and data.
@@ -101,7 +101,18 @@ You can decide the number of core to use with `--cpu <nb_core>` option.
     under the `output` directory.
     Hence, no more action is necessary to get the plots.
   
+## Only Plotting Guide
+The benchmarks take a long time as the number of configuration to be tested is high.
+In this repository, we provide our precomputed results located under the `precomputed_results`
+folder, in a JSON format.
 
+To recreate our plots we used in the paper, execute the `sudo ./only_plots.sh` shell script which 
+displays the plots under `precomputed_results/plots` folder.
+There are 4 plots:
+- `rewards.pdf` plots the cumulative rewards with respect to the budget N.
+- `scalability_N.pdf` plots the execution time with respect to the budget N with K = 100.
+- `scalability_K.pdf` plots the execution time with respect to the number of arms K with N = 100000.
+- `zoom.pdf` plots the execution time for each entity involved in the process with N = 100000 and respectively K = 10 and K = 100.
 
 ## Detailed Data Files Format and Generation
 We detailed in this section the format of each file given to the benchmarks python script.
