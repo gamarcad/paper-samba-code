@@ -52,16 +52,16 @@ If an error occurs during *cryptography* library installation, causing by a miss
 you need to update the pip module inside the environment by doing `samba/bin/python3 -m pip install --upgrade pip` command.
 The solution is adapted from the issue claimed at https://github.com/pyca/cryptography/issues/5753
 
-## Benchmarks Execution Guide
+## Benchmark Execution Guide
 This section describes how to reproduce the plots used in the article.
 
-Once the virtual environment is installed, you will be able to run the benchmarks.
+Once the virtual environment is installed, you will be able to run the benchmark
 Enter the virtual environment and run the following commands in the presented order:
 
 - `sudo python3 bench.py -h`
     This command displays details of each parameter needed by the benchmark program.
     You can complete each required option, or to execute the next command which is basically
-    a shell script which executes the `bench.py` python script with appropriate arguments. 
+    a shell script which calls the `bench.py` python script with appropriate arguments. 
     Some files must be indicated to the program:
     - The `--configs <filename>` option indicates the file containing all pairs of numbers of arms K and budget N to consider,
         in a CSV file format. 
@@ -102,8 +102,8 @@ You can decide the number of core to use with `--cpu <nb_core>` option.
     Hence, no more action is necessary to get the plots.
   
 ## Only Plotting Guide
-The benchmarks take a long time as the number of configuration to be tested is high.
-In this repository, we provide our precomputed results located under the `precomputed_results`
+The benchmark take a long time as the number of configuration to be tested is high.
+In this repository, we provide our pre-computed results located under the `precomputed_results`
 folder, in a JSON format.
 
 You can generate plots we used in the paper by executing the `sudo ./only_plots.sh` shell script which 
@@ -115,10 +115,10 @@ There are 4 plots:
 - `zoom.pdf` plots the execution time for each entity involved in the process with N = 100000 and respectively K = 10 and K = 100.
 
 ## Detailed Data Files Format and Generation
-We detailed in this section the format of each file given to the benchmarks python script.
+We detailed in this section the format of each file given to the benchmark python script.
 
 ### Data Files 
-Data files, located under `data` folder, contains the list of probabilities used in the multi-armed bandits algorithms.
+Data files, located under the `data` folder, contain the list of probabilities used in the multi-armed bandits algorithms.
 Each probability is placed alone on a single line.
 At the beginning of the data file is located the number of probabilities present in the
 concerned data file.
