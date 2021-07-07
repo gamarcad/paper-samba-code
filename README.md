@@ -9,7 +9,6 @@ This section describes the way to install Samba in a local environment.
 To run Samba, we need to have some library already installed on your system.
 To install them, 
 ```shell
-apt-get update -y && apt-get upgrade -y
 apt-get install build-essential git python3 python3-pip python3-venv -y
 ```
 
@@ -46,6 +45,9 @@ The virtual environment can be managed with these commands to enter in your term
     the instance in the virtual environment, meaning that the current path will not change.
 
 ### Troubleshooting
+When an error occurs during the first steps of the installation, please start by updating your system,
+by doing `sudo apt-get update -y && sudo apt-get upgrade -y`.
+
 If an error occurs during *cryptography* library installation, causing by a missing`setuptools_rust` module,
 you need to update the pip module inside the environment by doing `samba/bin/python3 -m pip install --upgrade pip` command.
 The solution is adapted from the issue claimed at https://github.com/pyca/cryptography/issues/5753
