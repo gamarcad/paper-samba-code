@@ -82,11 +82,10 @@ You can decide the number of core to use with `--cpu <nb_core>` option.
 | --- | --- |
 | Pursuit | pursuit | 
 | Softmax - Boltzmann | boltzmann | 
-| epsilon-greedy | e-greedy |  
-| epsilon-greedy decreasing | e-decreasing-greedy |
+| $$\varepsilon$$-greedy | e-greedy |  
+| $$\varepsilon$$-greedy decreasing | e-decreasing-greedy |
 | Thompson Sampling | thompson-sampling |
 | UCB | ucb |
-
 
 
     
