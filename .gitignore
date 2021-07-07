@@ -11,4 +11,4 @@ samba
 !LICENCE.txt
 !README.md
 __pycache__
-
+precomputed_results/plots
