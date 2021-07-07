@@ -53,38 +53,42 @@ you need to update the pip module inside the environment by doing `samba/bin/pyt
 The solution is adapted from the issue claimed at https://github.com/pyca/cryptography/issues/5753
 
 ## Benchmarks Execution Guide
-This section describes the benchmarks process.
+This section describes how to reproduce the plots used in the article.
 
 Once the virtual environment is installed, you will be able to run the benchmarks.
-Enter to the virtual environment and run the following commands in the presented order:
+Enter the virtual environment and run the following commands in the presented order:
 
 - `sudo python3 bench.py -h`
-    This command displays a details of each parameter needed by the benchmark program.
-    You are free to complete each required option, or to execute the next command which is basically
-    a script shell which execute the bench.py python script with appropriated arguments. 
+    This command displays details of each parameter needed by the benchmark program.
+    You can complete each required option, or to execute the next command which is basically
+    a shell script which executes the `bench.py` python script with appropriate arguments. 
     Some files must be indicated to the program:
-        The `--configs <filename>` option indicates the file containing all pairs of numbers of arms K and budget N to consider,
-        in a CSV file format.
-        The `--data <filename>` option indicates the file containing arms probabilities in a textual format, one probability by line.
-        Finally, the `--parameters <filename>` option indicates the file containing parameters in a CSV format, used to feed algorithms that
+    - The `--configs <filename>` option indicates the file containing all pairs of numbers of arms K and budget N to consider,
+        in a CSV file format. 
+      
+    - The `--data <filename>` option indicates the file containing arms probabilities in a textual format, one probability by line.
+        
+    - Finally, the `--parameters <filename>` option indicates the file containing parameters in a CSV format, used to feed algorithms that
         requires some parameters.
 
-    In case you want to focus on some algorithm, you can indicate the `--algorithms <IDalgo1> <IDalgo2> ...`
+    - To decrease the needed execution time, bench.py supports the multi-processing.
+By default, it uses the number of core available on the system.
+You can decide the number of core to use with `--cpu <nb_core>` option.
+
+    - In case you want to focus on some algorithm, you can indicate the `--algorithms <IDalgo1> <IDalgo2> ...`
     where supported algorithms, detailed here by name and ID are:
     
 | Algorithm | ID |
 | --- | --- |
 | Pursuit | pursuit | 
-| Softmax | boltzmann | 
-|  epsilon-greedy |e-greedy |  
-| epsilon-greedy decreasing | e-decreasing-greedy|
+| Softmax - Boltzmann | boltzmann | 
+| epsilon-greedy | e-greedy |  
+| epsilon-greedy decreasing | e-decreasing-greedy |
 | Thompson Sampling | thompson-sampling |
 | UCB | ucb |
 
 
-To decrease the needed execution time, bench.py supports the multi-processing.
-By default, it uses the number of core available on the system.
-You can decide the number of core to use with `--cpu <nb_core>` option.
+
     
 - `sudo launch_experiments.sh`
     This command executes the benchmark with pre-filled parameters.
