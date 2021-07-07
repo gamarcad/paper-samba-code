@@ -106,12 +106,12 @@ The benchmarks take a long time as the number of configuration to be tested is h
 In this repository, we provide our precomputed results located under the `precomputed_results`
 folder, in a JSON format.
 
-To recreate our plots we used in the paper, execute the `sudo ./only_plots.sh` shell script which 
+You can generate plots we used in the paper by executing the `sudo ./only_plots.sh` shell script which 
 displays the plots under `precomputed_results/plots` folder.
 There are 4 plots:
 - `rewards.pdf` plots the cumulative rewards with respect to the budget N.
-- `scalability_N.pdf` plots the execution time with respect to the budget N with K = 100.
-- `scalability_K.pdf` plots the execution time with respect to the number of arms K with N = 100000.
+- `scalability_N.pdf` plots the execution time while varying the budget N with K = 100.
+- `scalability_K.pdf` plots the execution time while varying the number of arms K with N = 100000.
 - `zoom.pdf` plots the execution time for each entity involved in the process with N = 100000 and respectively K = 10 and K = 100.
 
 ## Detailed Data Files Format and Generation
