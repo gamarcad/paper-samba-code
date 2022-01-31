@@ -1,6 +1,18 @@
-# SAMBA: a generic framework for Secure federAted Multi-armed BAndits
-This project contains the implementation of Samba, a secure framework for multi-armed bandits designed by
+## SAMBA: a generic framework for Secure federAted Multi-armed BAndits
 Radu Ciucanu, Pascal Lafourcade, Gael Marcadet, and Marta Soare.
+
+Journal of Artificial Intelligence Research (JAIR), Accepted (to appear), [Preprint](https://lig-membres.imag.fr/ciucanu/preprints/CLMS22.pdf)
+
+#### If you use our code, please cite
+```
+@article{CLMS22,
+  author    = {Ciucanu, R. and Lafourcade, P. and Marcadet, G. and Soare, M.},
+  title     = {{SAMBA: A Generic Framework for Secure Federated Multi-Armed Bandits}},
+  journal   = {Journal of Artificial Intelligence Research (JAIR)},
+  year      = {2022},
+  note      = {Accepted (to appear)}
+}
+```
 
 ## Installation Guide
 This section describes the way to install Samba in a local environment.
