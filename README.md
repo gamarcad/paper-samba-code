@@ -10,7 +10,8 @@ Radu Ciucanu, Pascal Lafourcade, Gael Marcadet, and Marta Soare.
   title     = {{SAMBA: A Generic Framework for Secure Federated Multi-Armed Bandits}},
   journal   = {Journal of Artificial Intelligence Research (JAIR)},
   volume    = {73},
-  pages     = {737--765}
+  pages     = {737--765},
+  year      = {2022}
 }
 ```
 
