@@ -1,7 +1,7 @@
 ## SAMBA: a generic framework for Secure federAted Multi-armed BAndits
 Radu Ciucanu, Pascal Lafourcade, Gael Marcadet, and Marta Soare.
 
-Journal of Artificial Intelligence Research (JAIR), Accepted (to appear), [Preprint](https://lig-membres.imag.fr/ciucanu/preprints/CLMS22.pdf)
+[Journal of Artificial Intelligence Research (JAIR)](https://www.jair.org/index.php/jair/article/view/13163)
 
 #### If you use our code, please cite
 ```
@@ -9,8 +9,8 @@ Journal of Artificial Intelligence Research (JAIR), Accepted (to appear), [Prepr
   author    = {Ciucanu, R. and Lafourcade, P. and Marcadet, G. and Soare, M.},
   title     = {{SAMBA: A Generic Framework for Secure Federated Multi-Armed Bandits}},
   journal   = {Journal of Artificial Intelligence Research (JAIR)},
-  year      = {2022},
-  note      = {Accepted (to appear)}
+  volume    = {73},
+  pages     = {737--765}
 }
 ```
 
